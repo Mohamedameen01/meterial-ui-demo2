@@ -1,3 +1,5 @@
 import Header from "./Header";
+import XSSearchInput from "./XSSearchInput";
+import MDSearchInput from "./MDSearchInput";
 
-export { Header };
+export { Header,XSSearchInput,MDSearchInput };
