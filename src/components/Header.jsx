@@ -53,7 +53,7 @@ function Header({open}) {
               }}
             >
               <AcUnitIcon sx={{ color: "#1e1e1ecc" }} />
-              <Typography sx={{ mx: 1, color: "black" }} variant="h6">
+              <Typography sx={{ mx: 1, color: "black" }} variant="h6" fontWeight='bold'>
                 Berry
               </Typography>
             </IconButton>

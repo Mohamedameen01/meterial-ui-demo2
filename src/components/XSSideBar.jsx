@@ -11,25 +11,44 @@ import MailIcon from "@mui/icons-material/Mail";
 import { Inbox } from "@mui/icons-material";
 import { useState } from "react";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
-function XSSideBar() {
+function XSSideBar({ open }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const style = {
+    position: "absolute",
+    top: "10px",
+    left: "0",
+    bgcolor: "background.paper",
+    width: 200,
+    hight: "100%",
+    mx: 3,
+    borderRight: "2px solid whitesmoke",
+  };
 
   const handleSelectedList = (index) => setSelectedIndex(index);
   return (
-    <Box>
-      <IconButton
-        sx={{
-          color: "#424242",
-          "&:hover": { bgcolor: "white" },
-        }}
-      >
-        <AcUnitIcon sx={{ color: "#1e1e1ecc" }} />
-        <Typography sx={{ mx: 1, color: "black" }} variant="h6">
-          Berry
-        </Typography>
-      </IconButton>
-      <List>
+    <Box sx={style}>
+      <Box sx={{display:'flex', justifyContent:'space-between'}}>
+        <IconButton
+          sx={{
+            color: "#424242",
+            "&:hover": { bgcolor: "white" },
+          }}
+        >
+          <AcUnitIcon sx={{ color: "#1e1e1ecc" }} />
+          <Typography
+            sx={{ mx: 1, color: "black" }}
+            variant="h6"
+            fontWeight="bold"
+          >
+            Berry
+          </Typography>
+        </IconButton>
+        <IconButton sx={{color:'#2196f3'}}  onClick={open}><KeyboardBackspaceIcon fontSize="small" /></IconButton>
+      </Box>
+      <List sx={{ mt: 3 }}>
         <Typography variant="body2">Dashboard</Typography>
 
         <ListItemButton
