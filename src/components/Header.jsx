@@ -28,7 +28,7 @@ import XSSearchInput from "./XSSearchInput";
 import MDSearchInput from "./MDSearchInput";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 
-function Header() {
+function Header({open}) {
   const [menuRight, setMenuRight] = useState(false);
   const [searchBtn, setSearchBtn] = useState(false);
 
@@ -70,6 +70,7 @@ function Header() {
                   color: "#fffffff5",
                 },
               }}
+              onClick={open}
             >
               <MenuIcon />
             </IconButton>
@@ -126,7 +127,6 @@ function Header() {
             open={menuRight}
             onClose={handleRightClose}
             aria-labelledby="demo-positioned-button"
-            anchorPosition={{}}
             anchorOrigin={{
               vertical: "top",
               horizontal: "right",

@@ -1,8 +1,9 @@
+import { Container } from '@mui/material'
 import React from 'react'
 
 function DefaultSection() {
   return (
-    <div>DefaultSection</div>
+    <Container>DefaultSection</Container>
   )
 }
 
