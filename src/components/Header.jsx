@@ -38,7 +38,7 @@ function Header({open}) {
   const handleSearchClose = () => setSearchBtn(false);
 
   return (
-    <div sx={{position:"fixed",bgcolor: "#ffffff" }}>
+    <AppBar position="fixed"  sx={{bgcolor: "#ffffff" }}>
       {searchBtn ? (
         <XSSearchInput close={handleSearchClose} />
       ) : (
@@ -148,7 +148,7 @@ function Header({open}) {
           </Menu>
         </Toolbar>
       )}
-    </div>
+    </AppBar>
   );
 }
 

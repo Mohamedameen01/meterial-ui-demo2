@@ -20,9 +20,9 @@ function Home() {
     
   return (
     <Box>
-      <Container component="section" maxWidth="xl">
+      <Container component="section" maxWidth="xl" >
         <Header open={handleMenuOpen} />
-        <Grid container marginTop={2}>
+        <Grid container >
           <Grid
             item
             sx={{ display: { xs: "none", md: "grid" } }}
@@ -37,9 +37,11 @@ function Home() {
               <SideBarIcons />
             )}
           </Grid>
+
           <Grid item xs={12} md={menuOpen ? 9 : 11} lg={menuOpen ? 10 : 11}>
             <DefaultSection />
           </Grid>
+          
           <div
             sx={{ display: { xs: "grid", md: "none" } }}
           >
